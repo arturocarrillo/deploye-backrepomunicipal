@@ -9,7 +9,7 @@ import multer from "multer";
 const app = express();
 
 mongoose.Promise = global.Promise;
-const dbUrl = "mongodb://localhost:27017/dbseseay";
+const dbUrl = "mongodb://192.168.10.245:27245/dbseseay";
 mongoose
     .connect(dbUrl, { useCreateIndex: true, useNewUrlParser: true })
     .then((mongoose) => console.log("Conexion lista: dbseseay port 27017"))
