@@ -21,8 +21,7 @@ export default {
     },
     descargame: async(req, res, next) => {
         res.download(
-            __dirname + "/documentos/" + req.params.id,
-            req.params.id,
+            __dirname + "'\\..\\documentos\\" + req.params.id,
             function(err) {
                 if (err) {
                     console.log(err);
@@ -32,7 +31,6 @@ export default {
             }
         );
     },
-
     query: async(req, res, next) => {
         try {
             const reg = await models.Usuario.findOne({ _id: req.query._id });
